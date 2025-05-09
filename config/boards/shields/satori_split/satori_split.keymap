@@ -1,0 +1,55 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer { /* Layer 0 – Base */
+            display-name = "Base";
+            /* The order of the bindings must match the order of the keys produced
+             * by your matrix transform, reading left-to-right, top-to-bottom.
+             *
+             * For our example matrix transform, the left half includes:
+             *   Row 0: 6 keys   (first key will be unlock)
+             *   Row 1: 6 keys
+             *   Row 2: 5 keys   (a physical key is missing so only five entries)
+             *   Row 3: 6 keys
+             *
+             * The right half includes the same number of keys:
+             *   Row 0: 6 keys
+             *   Row 1: 6 keys
+             *   Row 2: 5 keys
+             *   Row 3: 6 keys
+             *
+             * Total: 46 key positions.
+             */
+
+            bindings = <
+                /* Left Half, Row 0 (6 keys) */
+                &studio_unlock   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+
+                /* Left Half, Row 1 (6 keys) */
+                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+
+                /* Left Half, Row 2 (5 keys) */
+                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+
+                /* Left Half, Row 3 (6 keys) */
+                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+
+                /* Right Half, Row 0 (6 keys) */
+                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+
+                /* Right Half, Row 1 (6 keys) */
+                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+
+                /* Right Half, Row 2 (5 keys) */
+                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+
+                /* Right Half, Row 3 (6 keys) */
+                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+            >;
+        };
+    };
+};
