@@ -1,7 +1,6 @@
 #include <physical_layouts.dtsi>
 
-/ {
-    layout: layout {
+    satori_layout: layout {
         compatible = "zmk,physical-layout";
         display-name = "LAYOUT";
 
@@ -57,4 +56,3 @@
             , <&key_physical_attrs 100 150  996  425 (-2800)  1016   489>
             ;
     };
-};
