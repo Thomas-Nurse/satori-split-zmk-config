@@ -4,7 +4,6 @@
 / {
     chosen {
             zmk,physical-layout = &layout;
-            // Other chosen items
     };
 
     kscan0: kscan0 {
