@@ -90,5 +90,5 @@
   };
 
 &xiao_serial {
-    status = "enabled";
+    status = "ok";
 };
