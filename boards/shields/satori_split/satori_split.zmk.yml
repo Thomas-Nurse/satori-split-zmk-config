@@ -1,0 +1,11 @@
+file_format: "1"
+id: satori_split
+name: "Satori Split"
+type: shield
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+  - studio
+siblings:
+  - satori_split_left
+  - satori_split_right

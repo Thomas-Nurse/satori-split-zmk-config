@@ -1,0 +1,94 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &default_layout;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
+    };
+
+    default_layout: default_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>;
+
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100   14  161 (-1900)    64   211>
+            , <&key_physical_attrs 100 100  101  104 (-1900)   151   154>
+            , <&key_physical_attrs 100 100  239   23  (-600)   289    73>
+            , <&key_physical_attrs 100 100  358    2  (-200)   408    52>
+            , <&key_physical_attrs 100 100  472   13       0     0     0>
+            , <&key_physical_attrs 100 100  578    0       0     0     0>
+            , <&key_physical_attrs 100 100 1799  161    1900  1849   211>
+            , <&key_physical_attrs 100 100 1712  104    1900  1762   154>
+            , <&key_physical_attrs 100 100 1574   23     600  1624    73>
+            , <&key_physical_attrs 100 100 1455    2     200  1505    52>
+            , <&key_physical_attrs 100 100 1341   13       0     0     0>
+            , <&key_physical_attrs 100 100 1235    0       0     0     0>
+            , <&key_physical_attrs 100 100   46  256 (-1900)    96   306>
+            , <&key_physical_attrs 100 100  134  199 (-1900)   184   249>
+            , <&key_physical_attrs 100 100  250  123  (-600)   300   173>
+            , <&key_physical_attrs 100 100  362  103  (-200)   412   153>
+            , <&key_physical_attrs 100 100  472  113       0     0     0>
+            , <&key_physical_attrs 100 100  578  100       0     0     0>
+            , <&key_physical_attrs 100 100 1767  256    1900  1817   306>
+            , <&key_physical_attrs 100 100 1679  199    1900  1729   249>
+            , <&key_physical_attrs 100 100 1563  123     600  1613   173>
+            , <&key_physical_attrs 100 100 1451  103     200  1501   153>
+            , <&key_physical_attrs 100 100 1341  113       0     0     0>
+            , <&key_physical_attrs 100 100 1235  100       0     0     0>
+            , <&key_physical_attrs 100 100  166  294 (-1900)   216   344>
+            , <&key_physical_attrs 100 100  260  223  (-600)   310   273>
+            , <&key_physical_attrs 100 100  365  203  (-200)   415   253>
+            , <&key_physical_attrs 100 100  472  214       0     0     0>
+            , <&key_physical_attrs 100 100  578  201       0     0     0>
+            , <&key_physical_attrs 100 100 1646  294    1900  1696   344>
+            , <&key_physical_attrs 100 100 1553  223     600  1603   273>
+            , <&key_physical_attrs 100 100 1448  203     200  1498   253>
+            , <&key_physical_attrs 100 100 1341  214       0     0     0>
+            , <&key_physical_attrs 100 100 1235  201       0     0     0>
+            , <&key_physical_attrs 100 100  474  340 (-1000)   524   390>
+            , <&key_physical_attrs 100 100  459  456       0     0     0>
+            , <&key_physical_attrs 100 150  580  329  (-200)   633   404>
+            , <&key_physical_attrs 100 100  565  489     800   615   539>
+            , <&key_physical_attrs 100 150  687  380    1300   745   455>
+            , <&key_physical_attrs 100 150  800  414    2800   861   489>
+            , <&key_physical_attrs 100 100 1339  340    1000  1389   390>
+            , <&key_physical_attrs 100 100 1354  456       0     0     0>
+            , <&key_physical_attrs 100 150 1230  329     200  1280   404>
+            , <&key_physical_attrs 100 100 1248  489  (-800)  1298   539>
+            , <&key_physical_attrs 100 150 1125  380 (-1300)  1168   455>
+            , <&key_physical_attrs 100 150 1010  425 (-2800)  1030   489>
+            ;
+        };
+
+
+
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <12>;
+        rows = <4>;
+        map = <
+            // Left half (rows 0 to 3, columns 0-5)
+            RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)
+            RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5)
+            RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)
+            RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)
+            // Right half (rows 0 to 3, columns 6-11)
+            RC(0,6) RC(0,7) RC(0,8) RC(0,9) RC(0,10) RC(0,11)
+            RC(1,6) RC(1,7) RC(1,8) RC(1,9) RC(1,10) RC(1,11)
+            RC(2,7) RC(2,8) RC(2,9) RC(2,10) RC(2,11)
+            RC(3,6) RC(3,7) RC(3,8) RC(3,9) RC(3,10) RC(3,11)
+        >;
+    };
+  };
+
+&xiao_serial {
+    status = "disabled";
+};
