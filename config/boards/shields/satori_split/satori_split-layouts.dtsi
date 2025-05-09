@@ -1,8 +1,9 @@
 #include <physical_layouts.dtsi>
 
-    satori_layout: layout {
+/ {
+    satori_split_layout: satori_split_layout {
         compatible = "zmk,physical-layout";
-        display-name = "LAYOUT";
+        display-name = "Satori Split";
 
         kscan = <&kscan0>;
         transform = <&default_transform>;
@@ -56,3 +57,4 @@
             , <&key_physical_attrs 100 150  996  425 (-2800)  1016   489>
             ;
     };
+};

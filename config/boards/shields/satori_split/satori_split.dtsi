@@ -3,7 +3,7 @@
 
 / {
     chosen {
-            zmk,physical-layout = &satori_layout;
+            zmk,physical-layout = &satori_split_layout;
     };
 
     kscan0: kscan0 {
@@ -30,7 +30,7 @@
         >;
     };
 
-    &satori_layout {
+    &satori_split_layout {
         kscan = <&kscan0>;
         transform = <&default_transform>;
     };
