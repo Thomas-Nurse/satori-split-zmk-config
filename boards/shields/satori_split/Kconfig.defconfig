@@ -13,4 +13,22 @@ if SHIELD_SATORI_SPLIT_LEFT || SHIELD_SATORI_SPLIT_RIGHT
 config ZMK_SPLIT
     default y
 
+config ZMK_STUDIO_LOCKING
+    default n
+
+config ZMK_STUDIO_LOCK_ON_DISCONNECT
+    default n
+
+config ZMK_USB
+    default y
+
+config BT
+    default y
+
+config ZMK_BLE
+    default y
+
+config BT_BAS
+    default n
+
 endif
