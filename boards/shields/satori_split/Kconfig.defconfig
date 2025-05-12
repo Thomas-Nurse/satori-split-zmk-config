@@ -6,13 +6,6 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-endif
-
-if SHIELD_SATORI_SPLIT_LEFT || SHIELD_SATORI_SPLIT_RIGHT
-
-config ZMK_SPLIT
-    default y
-
 config ZMK_STUDIO_LOCKING
     default n
 
@@ -30,5 +23,12 @@ config ZMK_BLE
 
 config BT_BAS
     default n
+
+endif
+
+if SHIELD_SATORI_SPLIT_LEFT || SHIELD_SATORI_SPLIT_RIGHT
+
+config ZMK_SPLIT
+    default y
 
 endif
