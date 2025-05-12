@@ -26,29 +26,13 @@
              */
 
             bindings = <
-                /* Left Half, Row 0 (6 keys) */
-                &studio_unlock   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+                &studio_unlock   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE                  &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
 
-                /* Left Half, Row 1 (6 keys) */
-                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE                       &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
 
-                /* Left Half, Row 2 (5 keys) */
-                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+                            &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE                       &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
 
-                /* Left Half, Row 3 (6 keys) */
-                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
-
-                /* Right Half, Row 0 (6 keys) */
-                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
-
-                /* Right Half, Row 1 (6 keys) */
-                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
-
-                /* Right Half, Row 2 (5 keys) */
-                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
-
-                /* Right Half, Row 3 (6 keys) */
-                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE                       &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
             >;
         };
     };
