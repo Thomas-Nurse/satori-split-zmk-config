@@ -7,33 +7,50 @@
 
         default_layer { /* Layer 0 – Base */
             display-name = "Base";
-            /* The order of the bindings must match the order of the keys produced
-             * by your matrix transform, reading left-to-right, top-to-bottom.
-             *
-             * For our example matrix transform, the left half includes:
-             *   Row 0: 6 keys   (first key will be unlock)
-             *   Row 1: 6 keys
-             *   Row 2: 5 keys   (a physical key is missing so only five entries)
-             *   Row 3: 6 keys
-             *
-             * The right half includes the same number of keys:
-             *   Row 0: 6 keys
-             *   Row 1: 6 keys
-             *   Row 2: 5 keys
-             *   Row 3: 6 keys
-             *
-             * Total: 46 key positions.
-             */
+            /*
+                                                                                                        Keyboard Layout Diagram
+            ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
+            │  bootloader   │       Q       │       P       │       O       │       U       │     BLANK     │         │       V       │       L       │       D       │       F       │       Z       │     BLANK     │
+            └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
+            ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
+            │     BLANK     │       A       │       Þ       │       E       │       I       │       W       │         │       G       │       T       │       N       │       S       │       C       │     BLANK     │
+            └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
+                            ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
+                            │     BLANK     │       B       │      ING      │       Y       │     BLANK     │         │       K       │       H       │       M       │       J       │       X       │
+                            └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
+            ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
+            │     BLANK     │      META     │     SHIFT     │      CTRL     │     SPACE     │   BACKSPACE   │         │     RETURN    │       R       │      ALT      │     SHIFT     │     META      │     BLANK     │
+            └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
+            */
 
             bindings = <
-                &studio_unlock   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE                  &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+                                                  &bootloader   &kp Q   &kp P   &kp O   &kp U   &none                   &kp V   &kp L   &kp D   &kp F   &kp Z   &none
 
-                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE                       &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+                                                       &none   &kp A   &thorn   &kp E   &kp I   &kp W                   &kp G   &kp T   &kp N   &kp S   &kp C   &none
 
-                            &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE                       &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+                                                                 &none   &kp B   &ing   &kp Y   &none                   &kp K   &kp H   &kp M   &kp J   &kp X
 
-                &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE                       &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE   &kp SPACE
+                &none   &kp LEFT_META   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp SPACE   &kp BACKSPACE                   &kp RETURN   &kp R   &kp LEFT_ALT   &kp RIGHT_SHIFT   &kp RIGHT_META   &none
             >;
+        };
+    };
+};
+
+/ {
+    macros {
+        thorn: thorn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp T &kp H>
+                ;
+        };
+        ing: ing {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp I &kp N &kp G>
+                ;
         };
     };
 };
