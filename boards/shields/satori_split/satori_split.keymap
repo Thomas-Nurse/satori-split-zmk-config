@@ -185,7 +185,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYERTAP R L1 SHIFT L3";
             #binding-cells = <2>;
-            bindings = <&lt 1 R>, <&lt 3 R>;
+            bindings = <&lt 1 R &lt 3 R>;
             hold_trigger_key = <MOD_LSFT>;
             hold_behavior = <&sl MOD_LSFT>;
         };
@@ -194,7 +194,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYERTAP RETURN L2 SHIFT L4";
             #binding-cells = <2>;
-            bindings = <&lt 2 RETURN>, <&lt 4 RETURN>;
+            bindings = <&lt 2 RETURN &lt 4 RETURN>;
             hold_trigger_key = <MOD_LSFT>;
             hold_behavior = <&sl MOD_LSFT>;
         };
