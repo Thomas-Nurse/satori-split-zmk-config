@@ -181,7 +181,7 @@
 
 / {
     behaviors {
-        lt_R_L1_L3: layer_tap_sticky {
+        lt_R_L1_L3: layer_tap_r_l1_l3 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYERTAP R L1 SHIFT L3";
             #binding-cells = <2>;
@@ -190,7 +190,7 @@
             hold_behavior = <&sl MOD_LSFT>;
         };
 
-        lt_RETURN_L2_L4: layer_tap_sticky {
+        lt_RETURN_L2_L4: layer_tap_return_l2_l4 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYERTAP RETURN L2 SHIFT L4";
             #binding-cells = <2>;
