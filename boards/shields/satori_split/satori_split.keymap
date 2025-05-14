@@ -28,7 +28,7 @@
                                                          &kp ESC   &kp Q   &kp P   &kp O   &kp U   &none          &kp V   &kp L   &kp D   &kp F   &kp Z   &none
                                                      &bootloader   &kp A   &thorn   &kp E   &kp I   &kp W          &kp G   &kp T   &kp N   &kp S   &kp C   &none
                                                                         &none   &kp B   &ing   &kp Y   &none          &kp K   &kp H   &kp M   &kp J   &kp X
-                &none   &kp LEFT_META   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp SPACE   &mm BACKSPACE DELETE          &lt_RETURN_L2_L4   &lt_R_L1_L3   &kp LEFT_ALT   &kp RIGHT_SHIFT   &kp RIGHT_META   &none
+                &none   &kp LEFT_META   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp SPACE   &mm_BACKSPACE_DEL          &lt_RETURN_L2_L4   &lt_R_L1_L3   &kp LEFT_ALT   &kp RIGHT_SHIFT   &kp RIGHT_META   &none
             >;
         };
 
@@ -198,6 +198,15 @@
             hold_trigger_key = <MOD_LSFT>;
             hold_behavior = <&sl MOD_LSFT>;
         };
+
+        mm_BACKSPACE_DEL: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BKSP_TO_DEL";
+            #binding-cells = <2>;
+            bindings = <BKSP DEL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
     };
 };
 
