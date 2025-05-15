@@ -267,14 +267,14 @@
         mm_BACKETS: mod_morph_left_right_bracket {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LPAR, <&kp RPAR>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_UNDERSCORE_TILDE: mod_morph_underscore_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp UNDERSCORE, <&kp TILDE>;
+            bindings = <&kp UNDERSCORE>, <&kp TILDE>;
             mods = <MOD_LSFT|MOD_RSFT>;
         };
     };
