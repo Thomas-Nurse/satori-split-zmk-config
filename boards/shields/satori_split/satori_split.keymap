@@ -77,7 +77,7 @@
             */
             bindings = <
                                                         &none   &none   &none   &mm_GRAVE   &kp PIPE   &none          &none   &kp CARET   &mm_BACKSLASH    &mm_SLASH   &kp COLON   &mm_SEMICOLON
-                               &kp EXCLAMATION   &kp AMPERSAND   &kp AT   &kp PERCENT   &kp TILDE   &kp HASH          &kp LESS_THAN   &kp LEFT_BRACE   &LEFT_BRACKET   &RIGHT_BRACKET   &RIGHT_BRACE   &GREATER_THAN
+                               &kp EXCLAMATION   &kp AMPERSAND   &kp AT   &kp PERCENT   &kp TILDE   &kp HASH          &kp LESS_THAN   &kp LEFT_BRACE   &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &kp RIGHT_BRACE   &kp GREATER_THAN
                                              &kp KP_COMMA   &kp KP_EQUAL   &kp KP_LPAR   &kp KP_RPAR   &none          &kp KP_DIVIDE   &kp KP_PLUS   &kp KP_MINUS   &kp KP_MULTIPLY   &kp KP_DOT
                                                          &trans   &trans   &trans   &trans   &trans   &trans          &none   &none   &none   &none   &none   &none
             >;
