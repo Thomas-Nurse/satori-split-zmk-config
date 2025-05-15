@@ -275,7 +275,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp UNDERSCORE>, <&kp TILDE>;
-            mods = <MOD_LSFT|MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 };
