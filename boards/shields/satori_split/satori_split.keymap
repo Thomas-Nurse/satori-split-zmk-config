@@ -218,28 +218,28 @@
         mm_COMMA: mod_morph_comma {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>;
+            bindings = <&kp COMMA> <&none>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_GRAVE: mod_morph_grave {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE>;
+            bindings = <&kp GRAVE> <&none>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_BACKSLASH: mod_morph_backslash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BACKSLASH>;
+            bindings = <&kp BACKSLASH> <&none>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_SLASH: mod_morph_slash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SLASH>;
+            bindings = <&kp SLASH> <&none>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -260,7 +260,7 @@
         mm_SEMICOLON: mod_morph_semi_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SEMICOLON>;
+            bindings = <&kp SEMICOLON> <&none>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
