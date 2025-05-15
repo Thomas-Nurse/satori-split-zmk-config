@@ -212,63 +212,63 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BKSP>, <&kp DEL>;
-            mods = <(MOD_RSFT)>;
+            mods = <MOD_RSFT>;
         };
 
         mm_COMMA: mod_morph_comma {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>;
-            mods = <MOD_LSFT|MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_GRAVE: mod_morph_grave {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp GRAVE>;
-            mods = <MOD_LSFT|MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_BACKSLASH: mod_morph_backslash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BACKSLASH>;
-            mods = <MOD_LSFT|MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_SLASH: mod_morph_slash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SLASH>;
-            mods = <MOD_LSFT|MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_QUESTION: mod_morph_question_exclamation_mark {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp QUESTION, <kp EXCLAMATION>;
-            mods = <MOD_LSFT|MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_COLON: mod_morph_colon_semi_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COLON, <kp SEMICOLON>;
-            mods = <MOD_LSFT|MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_SEMICOLON: mod_morph_semi_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <kp SEMICOLON>;
-            mods = <MOD_LSFT|MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_BACKETS: mod_morph_left_right_bracket {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LPAR, <kp RPAR>;
-            mods = <MOD_LSFT|MOD_RSFT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_UNDERSCORE_TILDE: mod_morph_underscore_tilde {
