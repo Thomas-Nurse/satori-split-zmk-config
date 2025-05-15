@@ -184,7 +184,7 @@
         lt_R_L1_L3: layer_tap_r_l1_l3 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            bindings = <&lt 1 R>, <&lt 3 R>;
+            bindings = <&lt 1 R> <&lt 3 R>;
             hold_trigger_key = <MOD_LSFT>;
             hold_behavior = <&sl MOD_LSFT>;
         };
@@ -192,7 +192,7 @@
         lt_RETURN_L2_L4: layer_tap_return_l2_l4 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            bindings = <&lt 2 RETURN>, <&lt 4 RETURN>;
+            bindings = <&lt 2 RETURN> <&lt 4 RETURN>;
             hold_trigger_key = <MOD_LSFT>;
             hold_behavior = <&sl MOD_LSFT>;
         };
@@ -200,7 +200,7 @@
         mm_BACKSPACE_DEL: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <2>;
-            bindings = <BKSP>, <DEL>;
+            bindings = <BKSP> <DEL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
