@@ -182,28 +182,22 @@
 / {
     behaviors {
         lt_R_L1_L3: layer_tap_r_l1_l3 {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            #binding-cells = <2>;
-            bindings = <&mo 1>, <&kp R>;
-            hold_trigger_key = <MOD_LSFT>;
-            hold_behavior = <&mo 3>;
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&lt 1 R>, <&lt 3 R>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         lt_RETURN_L2_L4: layer_tap_return_l2_l4 {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            #binding-cells = <2>;
-            bindings = <&mo 2>, <&kp RETURN>;
-            hold_trigger_key = <MOD_LSFT>;
-            hold_behavior = <&mo 4>;
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&lt 2 RETURN>, <&lt 4 RETURN>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_BACKSPACE_DEL: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             bindings = <&kp BKSP>, <&kp DEL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
