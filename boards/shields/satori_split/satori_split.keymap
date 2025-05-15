@@ -246,14 +246,14 @@
         mm_QUESTION: mod_morph_question_exclamation_mark {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp QUESTION, <kp EXCLAMATION>;
+            bindings = <&kp QUESTION>, <kp EXCLAMATION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mm_COLON: mod_morph_colon_semi_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COLON, <kp SEMICOLON>;
+            bindings = <&kp COLON>, <kp SEMICOLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
