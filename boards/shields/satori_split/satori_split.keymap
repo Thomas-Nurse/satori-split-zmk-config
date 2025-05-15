@@ -11,24 +11,24 @@
             /*
                                                                                                       Keyboard Layout Diagram
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-            │      ESC      │       Q       │       P       │       O       │       U       │     BLANK     │         │       V       │       L       │       D       │       F       │       Z       │     BLANK     │
+            │      ESC      │       Z       │       B       │       O       │       U       │       J       │         │       Q       │       L       │       H       │       X       │     ? / !     │     : / ;     │
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-            │  BOOTLOADER   │       A       │       Þ       │       E       │       I       │       W       │         │       G       │       T       │       N       │       S       │       C       │     BLANK     │
+            │      TAB      │       A       │       Þ       │       E       │       I       │       W       │         │       G       │       T       │       N       │       S       │       C       │     ' / "     │
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
                             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-                            │     BLANK     │       B       │      ING      │       Y       │     BLANK     │         │       K       │       H       │       M       │       J       │       X       │
+                            │       ,       │       P       │      ING      │       Y       │       V       │         │       K       │       D       │       M       │       F       │       .       │
                             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-            │     BLANK     │      META     │     SHIFT     │      CTRL     │     SPACE     │   BACKSPACE   │         │RETURN /L2 / L4│  R / L1 / L3  │      ALT      │     SHIFT     │     META      │     BLANK     │
+            │    PAGE UP    │   PAGE DOWN   │     SHIFT     │      CTRL     │     SPACE     │   BACKSPACE   │         │RETURN /L2 / L4│  R / L1 / L3  │      ALT      │     SHIFT     │     META      │     BLANK     │
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             */
 
             bindings = <
-                                                              &kp ESC   &kp Q   &kp P   &kp O   &kp U   &none          &kp V   &kp L   &kp D   &kp F   &kp Z   &none
-                                                             &kp TAB   &kp A   &thorn   &kp E   &kp I   &kp W          &kp G   &kp T   &kp N   &kp S   &kp C   &kp END
-                                                                         &none   &kp B   &ing   &kp Y   &none          &kp K   &kp H   &kp M   &kp J   &kp X
-                    &none   &kp LEFT_META   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp SPACE   &mm_BACKSPACE_DEL          &lt_RETURN_L2_L4   &lt_R_L1_L3   &kp LEFT_ALT   &kp RIGHT_SHIFT   &kp RIGHT_META   &none
+                                                              &kp ESC   &kp Z   &kp B   &kp O   &kp U   &kp J          &kp Q   &kp L   &kp H   &kp X   &mm_QUESTION   &mm_COLON
+                                                                &TAB   &kp A   &thorn   &kp E   &kp I   &kp W          &kp G   &kp T   &kp N   &kp S   &kp C   &kp APOSTROPHE
+                                                                     &mm_COMMA   &kp B   &ing   &kp Y   &kp V          &kp K   &kp D   &kp M   &kp F   &kp PERIOD
+                    &kp PG_UP   &kp PG_DN   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp SPACE   &mm_BACKSPACE_DEL          &lt_RETURN_L2_L4   &lt_R_L1_L3   &kp LEFT_ALT   &kp RIGHT_SHIFT   &kp RIGHT_META   &none
             >;
         };
 
@@ -204,5 +204,26 @@
             bindings = <&kp BKSP>, <&kp DEL>;
             mods = <(MOD_RSFT)>;
         };
+
+        mm_COMMA: mod_morph_comma {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>;
+            mods = <MOD_LSFT|MOD_RSFT>;
+        };
+
+        mm_QUESTION: mod_morph_question_exclamation_mark {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp QUESTION, <kp EXCLAMATION>;
+            mods = <MOD_LSFT|MOD_RSFT>;
+        };
+
+        mm_COLON: mod_morph_colon_semi_colon {
+                    compatible = "zmk,behavior-mod-morph";
+                    #binding-cells = <0>;
+                    bindings = <&kp COLON, <kp SEMICOLON>;
+                    mods = <MOD_LSFT|MOD_RSFT>;
+                };
     };
 };
