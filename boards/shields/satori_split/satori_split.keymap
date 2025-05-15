@@ -11,24 +11,24 @@
             /*
                                                                                                       Keyboard Layout Diagram
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-            │      ESC      │       Z       │       B       │       O       │       U       │       J       │         │       Q       │       L       │       H       │       X       │     ? / !     │     : / ;     │
+            │     _ / ~     │       Z       │       B       │       O       │       U       │       J       │         │       Q       │       L       │       H       │       X       │     ? / !     │     : / ;     │
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-            │      TAB      │       A       │       Þ       │       E       │       I       │       W       │         │       G       │       T       │       N       │       S       │       C       │     ' / "     │
+            │     ( / )     │       A       │       Þ       │       E       │       I       │       W       │         │       G       │       T       │       N       │       S       │       C       │     ' / "     │
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
                             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
                             │       ,       │       P       │      ING      │       Y       │       V       │         │       K       │       D       │       M       │       F       │       .       │
                             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-            │    PAGE UP    │   PAGE DOWN   │     SHIFT     │      CTRL     │     SPACE     │   BACKSPACE   │         │RETURN /L2 / L4│  R / L1 / L3  │      ALT      │     SHIFT     │     META      │     BLANK     │
+            │      END      │      TAB      │     SHIFT     │      CTRL     │     SPACE     │   BACKSPACE   │         │RETURN /L2 / L4│  R / L1 / L3  │      ALT      │     SHIFT     │     META      │      ESC      │
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             */
 
             bindings = <
-                                                              &kp ESC   &kp Z   &kp B   &kp O   &kp U   &kp J          &kp Q   &kp L   &kp H   &kp X   &mm_QUESTION   &mm_COLON
-                                                                &TAB   &kp A   &thorn   &kp E   &kp I   &kp W          &kp G   &kp T   &kp N   &kp S   &kp C   &kp APOSTROPHE
+                                                 &mm_UNDERSCORE_TILDE   &kp Z   &kp B   &kp O   &kp U   &kp J          &kp Q   &kp L   &kp H   &kp X   &mm_QUESTION   &mm_COLON
+                                                         &mm_BACKETS   &kp A   &thorn   &kp E   &kp I   &kp W          &kp G   &kp T   &kp N   &kp S   &kp C   &kp APOSTROPHE
                                                                      &mm_COMMA   &kp B   &ing   &kp Y   &kp V          &kp K   &kp D   &kp M   &kp F   &kp PERIOD
-                    &kp PG_UP   &kp PG_DN   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp SPACE   &mm_BACKSPACE_DEL          &lt_RETURN_L2_L4   &lt_R_L1_L3   &kp LEFT_ALT   &kp RIGHT_SHIFT   &kp RIGHT_META   &none
+                        &kp END   &kp TAB   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp SPACE   &mm_BACKSPACE_DEL          &lt_RETURN_L2_L4   &lt_R_L1_L3   &kp LEFT_ALT   &kp RIGHT_SHIFT   &kp RIGHT_META   &kp ESC
             >;
         };
 
@@ -40,10 +40,10 @@
             │       F1      │       F2      │       F3      │       F4      │       F5      │       F6      │         │       F7      │       F8      │       F9      │      F10      │      F11      │      F12      │
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-            │     BLANK     │       0       │       1       │       2       │       3       │       4       │         │       5       │       6       │       7       │       8       │       9       │     BLANK     │
+            │       £       │       0       │       1       │       2       │       3       │       4       │         │       5       │       6       │       7       │       8       │       9       │       $       │
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
                             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-                            │       .       │       ,       │       (       │       )       │       =       │         │     BLANK     │       +       │       -       │       *       │       /       │
+                            │       ,       │       =       │       (       │       )       │     BLANK     │         │       /       │       +       │       -       │       *       │       .       │
                             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
             │     TRANS     │     TRANS     │     TRANS     │     TRANS     │     TRANS     │     TRANS     │         │      NONE     │      NONE     │      NONE     │      NONE     │      NONE     │      NONE     │
@@ -51,10 +51,10 @@
             */
 
             bindings = <
-                                                         &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6          &kp F7   &kp F8   &kp F9   &kp F10   &kp F11   &kp F12
-                                           &none   &kp KP_N0   &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_N4          &kp KP_N5   &kp KP_N6   &kp KP_N7   &kp KP_N8   &kp KP_N9   &none
-                                        &kp KP_DOT   &kp KP_COMMA   &kp KP_LPAR   &kp KP_RPAR   &kp KP_EQUAL          &none   &kp KP_PLUS   &kp KP_MINUS   &kp KP_MULTIPLY   &kp KP_DIVIDE
-                                                         &trans   &trans   &trans   &trans   &trans   &trans          &none   &none   &none   &none   &none   &none
+                                                          &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6          &kp F7   &kp F8   &kp F9   &kp F10   &kp F11   &kp F12
+                                      &pound_sign   &kp KP_N0   &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_N4          &kp KP_N5   &kp KP_N6   &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp DOLLAR
+                                              &kp KP_COMMA   &kp KP_EQUAL   &kp KP_LPAR   &kp KP_RPAR   &none          &kp KP_DIVIDE   &kp KP_PLUS   &kp KP_MINUS   &kp KP_MULTIPLY   &kp KP_DOT
+                                                          &trans   &trans   &trans   &trans   &trans   &trans          &none   &none   &none   &none   &none   &none
             >;
         };
 
@@ -63,22 +63,22 @@
             /*
                                                                                                       Keyboard Layout Diagram
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-            │     BLANK     │     BLANK     │     BLANK     │     BLANK     │     BLANK     │     BLANK     │         │     BLANK     │     BLANK     │     BLANK     │     BLANK     │     BLANK     │     BLANK     │
+            │     BLANK     │     BLANK     │     BLANK     │       `       │       |       │     BLANK     │         │     BLANK     │       ^       │       \       │       /       │       :       │       ;       │
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-            │     BLANK     │     BLANK     │     BLANK     │     BLANK     │     BLANK     │     BLANK     │         │     BLANK     │     BLANK     │     BLANK     │     BLANK     │     BLANK     │     BLANK     │
+            │       !       │       &       │       @       │       %       │       ~       │       #       │         │       <       │       {       │       [       │       ]       │       }       │       >       │
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
                             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-                            │     BLANK     │     BLANK     │     BLANK     │     BLANK     │     BLANK     │         │     BLANK     │     BLANK     │     BLANK     │     BLANK     │     BLANK     │
+                            │       ,       │       =       │       (       │       )       │     BLANK     │         │       /       │       +       │       -       │       *       │       .       │
                             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
             │     TRANS     │     TRANS     │     TRANS     │     TRANS     │     TRANS     │     TRANS     │         │      NONE     │      NONE     │      NONE     │      NONE     │      NONE     │      NONE     │
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             */
             bindings = <
-                                                               &none   &none   &none   &none   &none   &none          &none   &none   &none   &none   &none   &none
-                                                               &none   &none   &none   &none   &none   &none          &none   &none   &none   &none   &none   &none
-                                                                       &none   &none   &none   &none   &none          &none   &none   &none   &none   &none
+                                                        &none   &none   &none   &mm_GRAVE   &kp PIPE   &none          &none   &kp CARET   &mm_BACKSLASH    &mm_SLASH   &kp COLON   &mm_SEMICOLON
+                               &kp EXCLAMATION   &kp AMPERSAND   &kp AT   &kp PERCENT   &kp TILDE   &kp HASH          &kp LESS_THAN   &kp LEFT_BRACE   &LEFT_BRACKET   &RIGHT_BRACKET   &RIGHT_BRACE   &GREATER_THAN
+                                             &kp KP_COMMA   &kp KP_EQUAL   &kp KP_LPAR   &kp KP_RPAR   &none          &kp KP_DIVIDE   &kp KP_PLUS   &kp KP_MINUS   &kp KP_MULTIPLY   &kp KP_DOT
                                                          &trans   &trans   &trans   &trans   &trans   &trans          &none   &none   &none   &none   &none   &none
             >;
         };
@@ -100,8 +100,8 @@
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             */
             bindings = <
-                                                         &bootloader   &none   &none   &none   &none   &none          &none   &none   &none   &none   &none   &none
-                                                      &studio_unlock   &none   &none   &none   &none   &none          &none   &none   &none   &none   &none   &none
+                                                               &none   &none   &none   &none   &none   &none          &none   &none   &none   &none   &none   &none
+                                                               &none   &none   &none   &none   &none   &none          &none   &none   &none   &none   &none   &none
                                                                        &none   &none   &none   &none   &none          &none   &none   &none   &none   &none
                                                          &trans   &trans   &trans   &trans   &trans   &trans          &none   &none   &none   &none   &none   &none
             >;
@@ -176,6 +176,17 @@
                 = <&macro_tap &kp I &kp N &kp G>
                 ;
         };
+        pound_sign: pound_sign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTL &kp LSFT>
+                , <&macro_tap &kp U>
+                , <&macro_release &kp LCTL &kp LSFT>
+                , <&macro_tap &kp 0 &kp 0 &kp A &kp 3>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
     };
 };
 
@@ -195,7 +206,6 @@
             bindings = <&lt 2 RETURN>, <&lt 4 RETURN>;
             mods = <MOD_LSFT>;
             keep-mods = <MOD_LSFT>;
-
         };
 
         mm_BACKSPACE_DEL: backspace_delete {
@@ -212,6 +222,27 @@
             mods = <MOD_LSFT|MOD_RSFT>;
         };
 
+        mm_GRAVE: mod_morph_grave {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>;
+            mods = <MOD_LSFT|MOD_RSFT>;
+        };
+
+        mm_BACKSLASH: mod_morph_backslash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH>;
+            mods = <MOD_LSFT|MOD_RSFT>;
+        };
+
+        mm_SLASH: mod_morph_slash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>;
+            mods = <MOD_LSFT|MOD_RSFT>;
+        };
+
         mm_QUESTION: mod_morph_question_exclamation_mark {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -220,10 +251,31 @@
         };
 
         mm_COLON: mod_morph_colon_semi_colon {
-                    compatible = "zmk,behavior-mod-morph";
-                    #binding-cells = <0>;
-                    bindings = <&kp COLON, <kp SEMICOLON>;
-                    mods = <MOD_LSFT|MOD_RSFT>;
-                };
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COLON, <kp SEMICOLON>;
+            mods = <MOD_LSFT|MOD_RSFT>;
+        };
+
+        mm_SEMICOLON: mod_morph_semi_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <kp SEMICOLON>;
+            mods = <MOD_LSFT|MOD_RSFT>;
+        };
+
+        mm_BACKETS: mod_morph_left_right_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR, <kp RPAR>;
+            mods = <MOD_LSFT|MOD_RSFT>;
+        };
+
+        mm_UNDERSCORE_TILDE: mod_morph_underscore_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp UNDERSCORE, <kp TILDE>;
+            mods = <MOD_LSFT|MOD_RSFT>;
+        };
     };
 };
