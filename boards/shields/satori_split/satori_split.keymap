@@ -179,12 +179,13 @@
         pound_sign: pound_sign {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            tap-ms = <0>;
+            wait-ms = <0>;
             bindings
                 = <&macro_press &kp LCTL &kp LSFT>
                 , <&macro_tap &kp U>
                 , <&macro_release &kp LCTL &kp LSFT>
-                , <&macro_tap &kp 0 &kp 0 &kp A &kp 3>
-                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp 0 &kp 0 &kp A &kp 3 &kp SPACE>
                 ;
         };
     };
