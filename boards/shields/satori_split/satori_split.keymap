@@ -53,7 +53,7 @@
             bindings = <
                                                           &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6          &kp F7   &kp F8   &kp F9   &kp F10   &kp F11   &kp F12
                                       &pound_sign   &kp KP_N0   &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_N4          &kp KP_N5   &kp KP_N6   &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp DOLLAR
-                                              &kp MM_COMMA   &kp KP_EQUAL   &kp KP_LPAR   &kp KP_RPAR   &none          &kp KP_DIVIDE   &kp KP_PLUS   &kp KP_MINUS   &kp KP_MULTIPLY   &kp KP_DOT
+                                              &mm_COMMA   &kp KP_EQUAL   &kp KP_LPAR   &kp KP_RPAR   &none          &kp KP_DIVIDE   &kp KP_PLUS   &kp KP_MINUS   &kp KP_MULTIPLY   &kp KP_DOT
                                                           &trans   &trans   &trans   &trans   &trans   &trans          &none   &none   &none   &none   &none   &none
             >;
         };
@@ -78,7 +78,7 @@
             bindings = <
                                                         &none   &none   &none   &mm_GRAVE   &kp PIPE   &none          &none   &kp CARET   &mm_BACKSLASH    &mm_SLASH   &kp COLON   &mm_SEMICOLON
                                &kp EXCLAMATION   &kp AMPERSAND   &kp AT   &kp PERCENT   &kp TILDE   &kp HASH          &kp LESS_THAN   &kp LEFT_BRACE   &kp LEFT_BRACKET   &kp RIGHT_BRACKET   &kp RIGHT_BRACE   &kp GREATER_THAN
-                                             &kp mm_COMMA   &kp KP_EQUAL   &kp KP_LPAR   &kp KP_RPAR   &none          &kp KP_DIVIDE   &kp KP_PLUS   &kp KP_MINUS   &kp KP_MULTIPLY   &kp KP_DOT
+                                             &mm_COMMA   &kp KP_EQUAL   &kp KP_LPAR   &kp KP_RPAR   &none          &kp KP_DIVIDE   &kp KP_PLUS   &kp KP_MINUS   &kp KP_MULTIPLY   &kp KP_DOT
                                                          &trans   &trans   &trans   &trans   &trans   &trans          &none   &none   &none   &none   &none   &none
             >;
         };
