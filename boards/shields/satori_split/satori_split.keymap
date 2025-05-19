@@ -28,7 +28,7 @@
                                                  &mm_UNDERSCORE_TILDE   &kp Z   &kp G   &kp O   &kp U   &kp J          &kp Q   &kp L   &kp Y   &kp X   &mm_QUESTION   &mm_COLON
                                                         &mm_BRACKETS   &kp A   &thorn   &kp E   &kp I   &kp W          &kp B   &kp T   &kp N   &kp S   &kp C   &kp APOSTROPHE
                                                                      &mm_COMMA   &kp P   &ing   &kp D   &kp V          &kp K   &kp H   &kp M   &kp F   &kp PERIOD
-                  &mm_L2_L3   &mm_TAB_END   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp SPACE   &mm_BACKSPACE_DEL          &kp RETURN   &lt_R_L1   &kp LEFT_ALT   &kp RIGHT_SHIFT   &kp LEFT_META   &kp ESC
+                  &mm_L2_L3   &mm_TAB_END   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp SPACE   &mm_BACKSPACE_DEL          &kp RETURN   &lt 1 R   &kp LEFT_ALT   &kp RIGHT_SHIFT   &kp LEFT_META   &kp ESC
             >;
         };
 
@@ -167,15 +167,6 @@
 
 / {
     behaviors {
-        lt_R_L1: layer_tap_r_l1 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <125>;
-            bindings = <&mo 1>, <&kp R>;
-        };
 
         mm_BACKSPACE_DEL: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
