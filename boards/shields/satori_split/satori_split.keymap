@@ -37,7 +37,7 @@
             /*
                                                                                                       Keyboard Layout Diagram
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-            │       $       │       +       │       -       │       *       │       /       │       =       │         │       <       │       !       │       \       │       /       │       |       │       >       │
+            │       $       │       +       │       -       │       *       │       /       │       =       │         │       !       │     ( / <     │       \       │       /       │     ) / >     │       |       │
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
             │       £       │       0       │       1       │       2       │       3       │       4       │         │       [       │       {       │       ~       │       ;       │       }       │       ]       │
@@ -50,7 +50,7 @@
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             */
             bindings = <
-                     &kp DOLLAR   &kp KP_PLUS   &kp KP_MINUS   &kp KP_MULTIPLY   &kp KP_DIVIDE   &kp KP_EQUAL         &kp LESS_THAN   &kp EXCLAMATION   &mm_BACKSLASH    &mm_SLASH   &kp PIPE   &kp GREATER_THAN
+                     &kp DOLLAR   &kp KP_PLUS   &kp KP_MINUS   &kp KP_MULTIPLY   &kp KP_DIVIDE   &kp KP_EQUAL         &kp EXCLAMATION   &mm_LPAR   &mm_BACKSLASH    &mm_SLASH   &mm_RPAR   &mm_GRAVE
                        &pound_sign   &kp NUMBER_0   &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3   &kp NUMBER_4         &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp TILDE   &mm_SEMICOLON   &kp RIGHT_BRACE   &kp RIGHT_BRACKET
                                      &kp NUMBER_5   &kp NUMBER_6   &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9         &kp CARET   &kp AMPERSAND   &kp AT   &kp PERCENT   &kp HASH
                                                           &trans   &trans   &trans   &trans   &trans   &trans         &none   &none   &none   &none   &none   &none
@@ -250,6 +250,27 @@
             #binding-cells = <0>;
             bindings = <&mo 2>, <&tog 3>;
             mods = <(MOD_RSFT)>;
+        };
+
+        mm_LPAR: mod_morph_left_parentheses_less_than {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp LESS_THAN>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mm_RPAR: mod_morph_right_parentheses_greater_than {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp GREATER_THAN>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mm_PIPE: mod_morph_pipe_grave{
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE>, <&kp GRAVE>;
+            mods = <(MOD_LSFT)>;
         };
     };
 };
