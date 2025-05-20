@@ -20,7 +20,7 @@
                             │       ,       │       P       │      ING      │       D       │       V       │         │       K       │       H       │       M       │       F       │       .       │
                             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐         ┌───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────┐
-            │    L2 / L3    │   TAB / END   │     SHIFT     │      CTRL     │     SPACE     │   BACKSPACE   │         │     RETURN    │     R / L1    │      ALT      │     SHIFT     │     META      │      ESC      │
+            │               │      L3       │     SHIFT     │      CTRL     │     SPACE     │   BACKSPACE   │         │     RETURN    │     R / L1    │      ALT      │ TAB / END / L2│     META      │      ESC      │
             └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘         └───────────────┴───────────────┴───────────────┴───────────────┴───────────────┴───────────────┘
             */
 
@@ -28,7 +28,7 @@
                                                  &mm_UNDERSCORE_TILDE   &kp Z   &kp G   &kp O   &kp U   &kp J          &kp Q   &kp L   &kp Y   &kp X   &mm_QUESTION   &mm_COLON
                                                         &mm_BRACKETS   &kp A   &thorn   &kp E   &kp I   &kp W          &kp B   &kp T   &kp N   &kp S   &kp C   &kp APOSTROPHE
                                                                      &mm_COMMA   &kp P   &ing   &kp D   &kp V          &kp K   &kp H   &kp M   &kp F   &kp PERIOD
-                  &mm_L2_L3   &mm_TAB_END   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp SPACE   &mm_BACKSPACE_DEL          &kp RETURN   &lt 1 R   &kp LEFT_ALT   &kp RIGHT_SHIFT   &kp LEFT_META   &kp ESC
+                           &none   &tog 3   &kp LEFT_SHIFT   &kp LEFT_CONTROL   &kp SPACE   &mm_BACKSPACE_DEL          &kp RETURN   &lt 1 R   &kp LEFT_ALT   &lt 2 mm_TAB_END   &kp LEFT_META   &kp ESC
             >;
         };
 
@@ -82,7 +82,7 @@
             >;
         };
 
-        utility_layer { /*Layer 4*/
+        utility_layer { /*Layer 3*/
             display-name = "Utility";
             /*
                                                                                                       Keyboard Layout Diagram
